@@ -1,0 +1,110 @@
+Daniel Kaehn
+CS 2852 Lab 6 Report
+
+Required Benchmarks:
+
+grid3x3.txt words.txt ArrayListIndexed
+Search found 67 words
+Search runtime: 00:07.3023
+
+grid4x4.txt words.txt LinkedListIterated
+Search found 237 words
+Search runtime: 00:25.7462
+
+grid6x6.txt words.txt SortedArrayList
+Search found 877 words
+Search runtime: 01:47.3164
+
+
+Performing these tests showed to what extent increasing the grid
+size increased the runtime of the program. To gain a better sense
+of how each strategy would affect the runtime, the word list was
+changed to the 200words.txt and each strategy was tested with
+the grid3x3.txt and grid4x4.text files using a batch command process. 
+
+The results of these tests follow (note how each test finds the 
+same number of words, verifying that the program's functionality
+is indepenent of the data strucutre used):
+
+
+grid3x3.txt 2000words.txt ArrayListIndexed
+Search found 7 words
+Search runtime: 104.5172 ms
+
+grid3x3.txt 2000words.txt ArrayListIterated
+Search found 7 words
+Search runtime: 123.2673 ms
+
+grid3x3.txt 2000words.txt LinkedListIndexed
+Search found 7 words
+Search runtime: 00:01.2547
+
+grid3x3.txt 2000words.txt LinkedListIterated
+Search found 7 words
+Search runtime: 150.5751 ms
+
+grid3x3.txt 2000words.txt SortedArrayList
+Search found 7 words
+Search runtime: 101.0396 ms
+
+
+grid4x4.txt 2000words.txt ArrayListIndexed
+Search found 29 words
+Search runtime: 254.8882 ms
+
+grid4x4.txt 2000words.txt ArrayListIterated
+Search found 29 words
+Search runtime: 219.9636 ms
+
+grid4x4.txt 2000words.txt LinkedListIndexed
+Search found 29 words
+Search runtime: 00:03.5823
+
+grid4x4.txt 2000words.txt LinkedListIterated
+Search found 29 words
+Search runtime: 219.1994 ms
+
+grid4x4.txt 2000words.txt SortedArrayList
+Search found 29 words
+Search runtime: 188.5420 ms
+
+
+Finally, each of the strategies were tested with a more 'pure'
+increase of problem size with the grid3x3.text file, by increasing
+the words list to the words.txt file and testing every strategy.
+The LinkedListIndexed, as expected, took a very long time to run,
+and its final results are not included
+
+
+grid3x3.txt words.txt ArrayListIndexed
+Search found 67 words
+Search runtime: 00:07.2138
+
+grid3x3.txt words.txt ArrayListIterated
+Search found 67 words
+Search runtime: 00:06.2440
+
+grid3x3.txt words.txt LinkedListIndexed
+*Progress indicators suggest that this would
+take over three hours to run*
+
+grid3x3.txt words.txt LinkedListIterated
+Search found 67 words
+Search runtime: 00:07.3411
+
+grid3x3.txt words.txt SortedArrayList
+Search found 67 words
+Search runtime: 00:04.9546
+
+
+As expected, the LinkedListIndexed strategy is, of course,
+drastically slower than each of the other strategies due to
+the inefficient nature of the .get(i) method for the 
+LinkedList (O(n)). The SortedArrayList was faster and 
+more efficient than any other strategy in all cases, but
+especially with the larger problems rather than the smaller
+problems. This may be because both the big O of the contains()
+method of the SortedArrayList is much faster than that of any
+of the other strategies, because of its use of a binary search.
+Also, the amount of time that it takes to add all items in sorted order
+ofsets its efficiency in smaller problems.

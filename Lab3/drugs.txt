@@ -1,0 +1,12 @@
+00:00:00.1496 for ArrayList with Index Algorithm
+00:01:04.0423 for LinkedList with Index Algorithm
+00:00:00.1880 for ArrayList with Iterator Algorithm
+00:00:00.3915 for LinkedList with Iterator Algorithm
+00:00:00.2647 for ArrayList with Index Algorithm
+00:00:42.8295 for LinkedList with Index Algorithm
+00:00:00.2266 for ArrayList with Iterator Algorithm
+00:00:00.1917 for LinkedList with Iterator Algorithm
+00:00:00.2086 for ArrayList with Index Algorithm
+00:03:04.4366 for LinkedList with Index Algorithm
+00:00:00.1714 for ArrayList with Iterator Algorithm
+00:00:00.2090 for LinkedList with Iterator Algorithm
